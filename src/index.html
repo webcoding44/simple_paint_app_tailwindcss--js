@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple paint App</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="m-0 p-0 border-box flex justify-center items-center min-h-[100vh] bg-[#4a98f7]">
+
+    <div class="w-[800px] h-[500px] bg-[#fff] rounded-[10px] shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] ">
+        <div class="h-[50px] flex justify-between items-center border-b-2 border-[#ccc] px-[15px] py-0 ">
+            <div class="flex h-[70%] space-x-8 items-center">
+                <div class="eraser">
+                    <i class='bx bxs-eraser'></i>
+                    <label class="cursor-pointer my-0 mx-[3px]">eraser</label>
+                </div>
+                <div class="brush">
+                    <i class='bx bxs-brush'></i>
+                    <label class="cursor-pointer my-0 mx-[3px]">brush</label>
+                </div>
+                <div class="flex items-center ">
+                    <i class='bx bxs-palette'></i>
+                    <label class="cursor-pointer my-0 mx-[3px]" for="color-picker">chose color</label>
+                    <input class="border-none bg-transparent cursor-pointer" type="color" id="color-picker">
+                </div>
+                <input type="range" id="brush-width" min="1" max="10">
+            </div>
+            <div class="w-28 space-x-2 h-9 ">
+                <button id="save" class="bg-[#4a98f7] text-[#fff] w-12 h-7 rounded-[5px]">save</button>
+                <button id="clear" class="w-12 h-7 rounded-[5px]    hover:bg-slate-200">clear</button>
+            </div>
+        </div>
+        <div class="">
+            <canvas class="w-full h-[450px] rounded-b-[10px] active:text-[#4a98f7]"></canvas>
+        </div>
+    </div>
+    <script  src="app.js"></script>
+</body>
+</html>
